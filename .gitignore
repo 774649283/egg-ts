@@ -21,3 +21,4 @@ config/**/*.map
 .github
 .vscode
 typings
+package-lock.json

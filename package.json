@@ -1,16 +1,16 @@
 {
   "name": "egg-ts",
   "version": "1.0.0",
-  "description": "egg-ts测试",
+  "description": "egg-ts",
   "private": true,
   "egg": {
     "typescript": true,
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --daemon --title=egg-server-egg-ts",
+    "start": "egg-scripts start --port=7003 --daemon --title=egg-server-egg-ts --env=prod",
     "stop": "egg-scripts stop --title=egg-server-egg-ts",
-    "dev": "egg-bin dev",
+    "dev": "egg-bin dev --port=7003",
     "debug": "egg-bin debug",
     "test-local": "egg-bin test",
     "test": "npm run lint -- --fix && npm run test-local",
@@ -23,7 +23,9 @@
   },
   "dependencies": {
     "egg": "^2.30.0",
-    "egg-scripts": "^2.6.0"
+    "egg-scripts": "^2.6.0",
+    "egg-sequelize": "^6.0.0",
+    "mysql2": "^2.3.3"
   },
   "devDependencies": {
     "@types/mocha": "^2.2.40",
