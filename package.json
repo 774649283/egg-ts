@@ -8,10 +8,10 @@
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --port=7003 --daemon --title=egg-server-egg-ts --env=prod",
-    "stop": "egg-scripts stop --title=egg-server-egg-ts",
+    "start": "egg-scripts start --port=7003 -daemon --title=egg-server-egg-ts --env=prod",
+    "stop": "egg-script`s stop --title=egg-server-egg-ts",
     "dev": "egg-bin dev --port=7003",
-    "debug": "egg-bin debug",
+    "debug": "egg-bin debug --port=7003",
     "test-local": "egg-bin test",
     "test": "npm run lint -- --fix && npm run test-local",
     "cov": "egg-bin cov",
@@ -25,6 +25,7 @@
     "egg": "^2.30.0",
     "egg-scripts": "^2.6.0",
     "egg-sequelize": "^6.0.0",
+    "moment": "^2.29.1",
     "mysql2": "^2.3.3"
   },
   "devDependencies": {

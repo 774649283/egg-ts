@@ -1,8 +1,9 @@
-import { Controller } from 'egg';
+import BaseController from './base';
 
-export default class HomeController extends Controller {
+export default class HomeController extends BaseController {
   public async index() {
     const { ctx } = this;
-    ctx.success(await ctx.service.test.sayHi('egg'));
+    console.log(this.getHelper().getReqIP());
+    this.success({ data: await ctx.service.test.sayHi('egg') });
   }
 }
