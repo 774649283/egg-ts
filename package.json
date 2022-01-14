@@ -8,8 +8,8 @@
     "declarations": true
   },
   "scripts": {
-    "start": "egg-scripts start --port=7003 -daemon --title=egg-server-egg-ts --env=prod",
-    "stop": "egg-script`s stop --title=egg-server-egg-ts",
+    "start": "egg-scripts start --port=7003 --daemon --title=egg-server-egg-ts --env=prod",
+    "stop": "egg-scripts stop --title=egg-server-egg-ts",
     "dev": "egg-bin dev --port=7003",
     "debug": "egg-bin debug --port=7003",
     "test-local": "egg-bin test",
