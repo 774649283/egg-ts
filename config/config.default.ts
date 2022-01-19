@@ -12,6 +12,11 @@ export default (appInfo: EggAppInfo) => {
     'req',
   ];
 
+  config.wx = {
+    token: 'liubao',
+  };
+
+
   // add your special config in here
   const bizConfig = {
     sourceUrl: `https://github.com/eggjs/examples/tree/master/${appInfo.name}`,

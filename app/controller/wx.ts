@@ -1,7 +1,9 @@
-import { Controller } from 'egg';
+import BaseController from './base';
 
-export default class WxController extends Controller {
+export default class WxController extends BaseController {
   public async token() {
-    this.ctx.body = 'liubao';
+    const { ctx } = this;
+    const { signature, timestamp, nonce, echostr } = this.getQuery();
+    this.ctx.body = await ctx.service.crypto.checkSignature(signature, timestamp, nonce, echostr);
   }
 }
