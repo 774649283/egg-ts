@@ -19,4 +19,12 @@ export default class WxController extends BaseController {
     await this.getWechatRedis().set('wechat:token', data.access_token, 'EX', data.expires_in);
     this.success(result);
   }
+
+  // 推送客服消息
+  public async sendMessage() {
+    const { ctx } = this;
+    const { touser, msgtype, text, image, link, miniprogrampage } = this.getBody();
+    const result = await ctx.service.wx.sendMessage(touser, msgtype, text, image, link, miniprogrampage);
+    this.success(result);
+  }
 }
