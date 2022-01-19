@@ -15,6 +15,8 @@ export default class WxController extends BaseController {
         dataType: 'json',
         timeout: 10000,
       });
+    const { data } = result;
+    await this.getWechatRedis().set('wechat:token', data.access_token, 'EX', data.expires_in);
     this.success(result);
   }
 }

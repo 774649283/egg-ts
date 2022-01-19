@@ -1,5 +1,6 @@
-import { Controller } from 'egg';
+import { Controller, Singleton } from 'egg';
 import { IHelper } from 'egg';
+import { Redis } from 'ioredis';
 
 export interface ResOp {
   data?: any;
@@ -63,4 +64,13 @@ export default abstract class BaseController extends Controller {
     };
   }
 
+  // redis 0库
+  getWechatRedis() {
+    return ((this.app.redis as Singleton<Redis>).get('wechat'));
+  }
+
+  // redis 1库
+  getAppRedis() {
+    return ((this.app.redis as Singleton<Redis>).get('app'));
+  }
 }

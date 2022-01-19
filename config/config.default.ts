@@ -16,8 +16,8 @@ export default (appInfo: EggAppInfo) => {
     token: 'liubao',
     EncodingAESKey: 'cluv3G53IYCpRZcO646oYNUa1G57MBNVUiSKBX3JKlu', // 推送消息加密密钥
     BaseUrl: 'https://api.weixin.qq.com/cgi-bin/', // 微信小程序接口url前缀
-    AppID: '', // 小程序应用id
-    AppSecret: '', // 小程序密钥
+    AppID: 'wxcf31728a7ef85bd8', // 小程序应用id
+    AppSecret: '47e51409a77ce0ff5545beae6fb98a26', // 小程序密钥
   };
 
 
