@@ -18,10 +18,10 @@ export default class Crypto extends Service {
 
   /**
    * 微信推送校验加密
-   * @param signature
-   * @param timestamp
-   * @param nonce
-   * @param echostr
+   * @param signature 微信加密签名
+   * @param timestamp 时间戳
+   * @param nonce 随机数
+   * @param echostr 随机字符串
    */
   public async checkSignature(signature:any, timestamp:any, nonce:any, echostr:any) {
     const TOKEN = this.config.wx.token;

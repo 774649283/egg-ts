@@ -8,4 +8,5 @@ export default (app: Application) => {
    * 微信api
    */
   router.get('/wx/token', controller.wx.token);
+  router.get('/wx/getToken', controller.wx.getToken);
 };
